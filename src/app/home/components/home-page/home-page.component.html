@@ -1,0 +1,9 @@
+<app-base-layout>
+  <div class="appbar">
+    <span>{{ 'HOME.TITLE' | translate }}</span>
+  </div>
+  <div class="content">
+    {{ 'HOME.WELCOME_MESSAGE' | translate }}
+    <button (click)="logout()" mat-raised-button color="primary">{{ 'GLOBAL.LOGOUT' | translate }}</button>
+  </div>
+</app-base-layout>

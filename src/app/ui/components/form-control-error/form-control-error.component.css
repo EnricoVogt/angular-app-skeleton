@@ -1,0 +1,9 @@
+:host {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+:host .form-control-error {
+    margin-bottom:32px;
+    padding: 16px 0;
+    background: lightcoral;
+}

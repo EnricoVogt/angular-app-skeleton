@@ -1,0 +1,37 @@
+<app-base-layout>
+    <div class="appbar">
+      <span>{{ 'AUTH.TITLE' | translate }}</span>
+    </div>
+    <div class="content">
+
+      {{ 'AUTH.TITLE' | translate }}
+
+      <form [formGroup]="authForm" (ngSubmit)="authFormSubmit()">
+        <div class="w100">
+            <mat-form-field>
+              <input matInput placeholder="{{ 'AUTH.FORM.EMAIL' | translate }}" formControlName="email" [errorStateMatcher]="matcher">
+              <mat-error *ngIf="authForm.controls.email.hasError('required')">
+                {{ 'AUTH.FORM.NOTICE.EMAIL.REQUIRED' | translate }}
+              </mat-error>
+              <mat-error *ngIf="authForm.controls.email.hasError('email')">
+                {{ 'AUTH.FORM.NOTICE.EMAIL.VALID' | translate }}
+              </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="w100">
+            <mat-form-field>
+              <input matInput placeholder="{{ 'AUTH.FORM.PASSWORD' | translate }}" formControlName="password" [errorStateMatcher]="matcher">
+              <mat-error *ngIf="authForm.controls.password.hasError('required')">
+                {{ 'AUTH.FORM.NOTICE.PASSWORD.REQUIRED' | translate }}
+              </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="w100">
+            <mat-checkbox class="mat-form-field-infix" matInput formControlName="rememberLogin">{{ 'AUTH.FORM.REMEMBERLOGIN' | translate }}</mat-checkbox>
+        </div>
+        <div class="w100" style="padding-top:16px">
+            <button type="submit" mat-raised-button color="primary">{{ 'AUTH.FORM.LOGIN' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </app-base-layout>
