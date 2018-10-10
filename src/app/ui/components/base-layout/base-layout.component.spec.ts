@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BaseLayoutComponent } from './base-layout.component';
+import { MatUiModule } from '../../modules/mat-ui/mat-ui.module';
 
 describe('BaseLayoutComponent', () => {
   let component: BaseLayoutComponent;
@@ -8,6 +9,9 @@ describe('BaseLayoutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MatUiModule
+      ],
       declarations: [ BaseLayoutComponent ]
     })
     .compileComponents();

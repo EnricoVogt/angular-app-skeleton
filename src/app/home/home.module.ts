@@ -32,7 +32,7 @@ export function createTranslateLoader(http: HttpClient) {
   ]
 })
 export class HomeModule {
-  constructor(private readonly translate: TranslateService) {
+  constructor() {
 
   }
 }
