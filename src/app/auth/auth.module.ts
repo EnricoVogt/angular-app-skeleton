@@ -14,7 +14,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { reducers } from './reducers/reducers'
 import { ReactiveFormsModule } from '@angular/forms';
-import { TranslateModule, TranslateLoader } from '../../../node_modules/@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -47,11 +47,11 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   /* providers: [ AuthService, AuthGuardService ] */
 })
-export class AuthModule { 
+export class AuthModule {
 
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<AuthModule> {
     return {
-      ngModule: this,
+      ngModule: AuthModule,
       providers: [AuthService, AuthGuardService],
     };
   }

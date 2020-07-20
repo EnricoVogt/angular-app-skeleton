@@ -42,10 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     ),
     UiModule,
-    /*
-    HomeModule, */
-    AuthModule.forRoot(), 
-    
+    AuthModule.forRoot(),
     AppRoutingModule,
   ],
   exports: [
